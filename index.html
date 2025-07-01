@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this is title -->
+    <title>Powering-Intelligent-Growth</title>
+    <!-- this is wtyle sheets -->
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- this is remix icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+
+        <ul class="nav-links" id="nav-links">
+            <li>Home</li>
+            <li>Products</li>
+            <li>Contact</li>
+        </ul>
+
+        <i class="ri-menu-line" id="menu-icon"></i>
+        <i class="ri-close-line" id="close-icon"></i>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <h2>🚧 Xabar</h2>
+            <p>Bu sayt faqat shu qismigacha ishlaydi, radnoy 😉</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const navLinks = document.getElementById('nav-links');
+            const modal = document.getElementById('modal');
+            const modalClose = document.getElementById('modal-close');
+
+            // 🔹 Menyu ochish
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.add('active');
+                menuIcon.style.display = "none";
+                closeIcon.style.display = "block";
+            });
+
+            // 🔹 Menyu yopish
+            closeIcon.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuIcon.style.display = "block";
+                closeIcon.style.display = "none";
+            });
+
+            // 🔹 MODAL TRIGGER — hamma li'ga qo‘llaymiz
+            const menuItems = navLinks.querySelectorAll('li');
+            menuItems.forEach((item) => {
+                item.addEventListener('click', () => {
+                    modal.classList.add('active');
+                    navLinks.classList.remove('active');
+                    menuIcon.style.display = "block";
+                    closeIcon.style.display = "none";
+                });
+            });
+
+            // 🔹 MODAL yopish
+            modalClose.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            // 🔹 MODAL foniga bosish bilan yopish
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
