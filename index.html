@@ -18,6 +18,7 @@
 
 <body>
     <nav class="navbar container">
+        <div class="menu-overlay" id="menu-overlay"></div>
 
         <ul class="nav-links" id="nav-links">
             <li>Home</li>
@@ -30,6 +31,7 @@
     </nav>
     <!-- Modal -->
     <div class="modal" id="modal">
+        <!-- MENU OVERLAY -->
         <div class="modal-content">
             <span class="modal-close" id="modal-close">&times;</span>
             <h2>🚧 Xabar</h2>
@@ -56,6 +58,19 @@
             <p>Business Hours: Mon-Fri, 9 AM - 6 PM (EST)</p>
         </div>
     </section>
+    <!-- Agency section -->
+    <section class="Agency container">
+        <div class="Agency_left_box">
+            <h2>AI Agency - London Office</h2>
+            <p>Address: 456 Tech Avenue, Floor 3, London EC1A 1AA, United Kingdom</p>
+            <p>Phone: +998 97 071 84 21</p>
+            <p>Email: <a href="#">maxsadbek@gmail.com</a></p>
+            <p>Business Hours: Mon-Fri, 9 AM - 6 PM (GMT)</p>
+        </div>
+        <div class="agency_img">
+            <img src="./img/png/ai-robot.jpg" alt="">
+        </div>
+    </section>
     <!-- script -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -64,10 +79,12 @@
             const navLinks = document.getElementById('nav-links');
             const modal = document.getElementById('modal');
             const modalClose = document.getElementById('modal-close');
+            const menuOverlay = document.getElementById('menu-overlay'); // ← qo‘shildi
 
             // 🔹 Menyu ochish
             menuIcon.addEventListener('click', () => {
                 navLinks.classList.add('active');
+                menuOverlay.classList.add('active'); // ← overlay
                 menuIcon.style.display = "none";
                 closeIcon.style.display = "block";
             });
@@ -75,6 +92,7 @@
             // 🔹 Menyu yopish
             closeIcon.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                menuOverlay.classList.remove('active'); // ← overlay
                 menuIcon.style.display = "block";
                 closeIcon.style.display = "none";
             });
@@ -85,6 +103,7 @@
                 item.addEventListener('click', () => {
                     modal.classList.add('active');
                     navLinks.classList.remove('active');
+                    menuOverlay.classList.remove('active'); // ← overlay
                     menuIcon.style.display = "block";
                     closeIcon.style.display = "none";
                 });
@@ -101,9 +120,15 @@
                     modal.classList.remove('active');
                 }
             });
+
+            // 🔹 MENU OVERLAY bosilsa — menyuni yopadi
+            menuOverlay.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                menuIcon.style.display = "block";
+                closeIcon.style.display = "none";
+            });
         });
-
-
 
     </script>
 
