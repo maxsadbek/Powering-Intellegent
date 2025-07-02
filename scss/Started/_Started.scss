@@ -1,0 +1,58 @@
+.Started {
+    display: flex;
+    margin-top: 6rem;
+    justify-content: space-between;
+
+    .Started_box {
+        width: 100%;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+
+    .Started_box1 {
+        width: 100%;
+        margin-left: 4rem;
+
+        p {
+            font-size: 19px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .Started {
+        display: flex;
+        flex-direction: column;
+        margin-top: 6rem;
+        width: 95%;
+
+        .Started_box {
+            width: 100%;
+            margin-bottom: 2rem;
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .Started_box1 {
+            width: 100%;
+            margin-left: 0rem;
+
+            p {
+                font-size: 16px;
+                width: 100%;
+            }
+        }
+    }
+}
