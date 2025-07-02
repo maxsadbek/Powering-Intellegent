@@ -1,15 +1,15 @@
 {
   "dependencies": {
+    "bootstrap-icons": "^1.13.1",
     "express": "^5.1.0"
   },
   "name": "powering-intellegent",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "sass": "sass scss/style.scss:style/style.css",
-    "sass:watch":"sass --watch scss/style.scss:style/style.css",
+    "sass:watch": "sass --watch scss/style.scss:style/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

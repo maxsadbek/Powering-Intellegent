@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   margin: 0;
   font-family: sans-serif;
@@ -205,12 +206,121 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1380px;
   width: 100%;
   margin: 0 auto;
+}
+
+.always {
+  display: flex;
+}
+.always .always_right {
+  width: 950px;
+  height: 500px;
+  margin-left: 2rem;
+  background-color: #F16213;
+  padding: 3rem;
+  color: #fff;
+  border-radius: 30px;
+  align-items: center;
+  padding-top: 10rem;
+  margin-top: 3rem;
+}
+.always .always_right a {
+  color: #fff;
+  text-decoration: none;
+}
+.always .always_right h2 {
+  font-size: 25px;
+}
+.always .always_right p {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.always_left {
+  margin-top: 3rem;
+  position: relative;
+}
+.always_left h3 {
+  font-size: 25px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+.always_left h1 {
+  font-size: 72px;
+  font-weight: 400;
+}
+.always_left p {
+  font-weight: 34px;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.always_left .right_icon {
+  position: absolute;
+  right: 1rem;
+  font-weight: 100;
+}
+.always_left .right_icon i {
+  font-size: 120px;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 600px) {
+  .always {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  .always .always_right {
+    width: 100%;
+    height: 370px;
+    margin-left: 0;
+    background-color: #F16213;
+    padding: 3rem;
+    color: #fff;
+    border-radius: 30px;
+    align-items: center;
+    padding-top: 1rem;
+    margin-top: 3rem;
+  }
+  .always .always_right a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .always .always_right h2 {
+    font-size: 25px;
+  }
+  .always .always_right p {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  .always_left {
+    margin-top: 3rem;
+    position: relative;
+  }
+  .always_left h3 {
+    font-size: 16px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  .always_left h1 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .always_left p {
+    font-weight: 34px;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+  .always_left .right_icon {
+    position: absolute;
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
