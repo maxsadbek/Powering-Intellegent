@@ -73,14 +73,14 @@
 
         .always_right {
             width: 100%;
-           height: 370px;
+            height: 370px;
             margin-left: 0;
             background-color: $orange;
-            padding: $rem3;
+            padding: $rem2;
             color: #fff;
-            border-radius: 30px;
+            border-radius: 20px;
             align-items: center;
-            padding-top: $rem1;
+            padding-top: $rem4;
             margin-top: $rem3;
 
             a {
@@ -89,12 +89,13 @@
             }
 
             h2 {
-                font-size: 25px;
+                font-size: 20px;
             }
 
             p {
+                font-size: 16px;
                 margin-top: 1rem;
-                font-weight: 600;
+                font-weight: 500;
             }
         }
     }
@@ -115,8 +116,8 @@
         }
 
         p {
-            font-weight: 34px;
-            font-weight: 600;
+            font-weight: 24px;
+            font-weight: 400;
             margin-top: 2rem;
         }
 

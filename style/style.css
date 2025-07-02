@@ -281,11 +281,11 @@ body {
     height: 370px;
     margin-left: 0;
     background-color: #F16213;
-    padding: 3rem;
+    padding: 2rem;
     color: #fff;
-    border-radius: 30px;
+    border-radius: 20px;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 4rem;
     margin-top: 3rem;
   }
   .always .always_right a {
@@ -293,11 +293,12 @@ body {
     text-decoration: none;
   }
   .always .always_right h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .always .always_right p {
+    font-size: 16px;
     margin-top: 1rem;
-    font-weight: 600;
+    font-weight: 500;
   }
   .always_left {
     margin-top: 3rem;
@@ -313,8 +314,8 @@ body {
     font-weight: 400;
   }
   .always_left p {
-    font-weight: 34px;
-    font-weight: 600;
+    font-weight: 24px;
+    font-weight: 400;
     margin-top: 2rem;
   }
   .always_left .right_icon {
