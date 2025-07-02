@@ -13,7 +13,7 @@
         integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- this is favicon -->
-    <link rel="shortcut icon" href="./img/png/favicon copy.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/png/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -38,39 +38,66 @@
             <p>Bu sayt faqat shu qismigacha ishlaydi, radnoy 😉</p>
         </div>
     </div>
-    <!-- always section -->
-    <section class="container always">
-        <div class="always_left">
-            <h3>Powering the Future of Digital Solutions</h3>
-            <h1>Any questions? Simply ask us this is you home!</h1>
-            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus est Lorem ipsum dolor sit amet.</p>
-            <div class="right_icon">
-                <i class="ri-arrow-right-up-line"></i>
+    <!-- main -->
+    <main>
+        <!-- always section -->
+        <section class="container always">
+            <div class="always_left">
+                <h3>Powering the Future of Digital Solutions</h3>
+                <h1>Any questions? Simply ask us this is you home!</h1>
+                <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                    sanctus est Lorem ipsum dolor sit amet.</p>
+                <div class="right_icon">
+                    <i class="ri-arrow-right-up-line"></i>
+                </div>
             </div>
-        </div>
-        <div class="always_right">
-            <h2>AI Agency - New York Office</h2>
-            <p>Address: 123 Innovation Street, Suite 500, New</p>
-            <p>York, NY 10001</p>
-            <p>Phone: +1 (212) 555-1234</p>
-            <p>Email: <a href="#">maxsadbek@gmail.com</a></p>
-            <p>Business Hours: Mon-Fri, 9 AM - 6 PM (EST)</p>
-        </div>
-    </section>
-    <!-- Agency section -->
-    <section class="Agency container">
-        <div class="Agency_left_box">
-            <h2>AI Agency - London Office</h2>
-            <p>Address: 456 Tech Avenue, Floor 3, London EC1A 1AA, United Kingdom</p>
-            <p>Phone: +998 97 071 84 21</p>
-            <p>Email: <a href="#">maxsadbek@gmail.com</a></p>
-            <p>Business Hours: Mon-Fri, 9 AM - 6 PM (GMT)</p>
-        </div>
-        <div class="agency_img">
-            <img src="./img/png/ai-robot.jpg" alt="">
-        </div>
-    </section>
+            <div class="always_right">
+                <h2>AI Agency - New York Office</h2>
+                <p>Address: 123 Innovation Street, Suite 500, New</p>
+                <p>York, NY 10001</p>
+                <p>Phone: +1 (212) 555-1234</p>
+                <p>Email: <a href="#">maxsadbek@gmail.com</a></p>
+                <p>Business Hours: Mon-Fri, 9 AM - 6 PM (EST)</p>
+            </div>
+        </section>
+        <!-- Agency section -->
+        <section class="Agency container">
+            <div class="Agency_left_box">
+                <h2>AI Agency - London Office</h2>
+                <p>Address: 456 Tech Avenue, Floor 3, London EC1A 1AA, United Kingdom</p>
+                <p>Phone: +998 97 071 84 21</p>
+                <p>Email: <a href="#">maxsadbek@gmail.com</a></p>
+                <p>Business Hours: Mon-Fri, 9 AM - 6 PM (GMT)</p>
+            </div>
+            <div class="agency_img">
+                <img src="./img/png/ai-robot.jpg" alt="">
+            </div>
+        </section>
+        <!-- contact section -->
+        <section class="container form">
+            <form action="#" class="contact">
+                <div>
+                    <label for="FirstName">First Name</label>
+                    <input type="text" id="FirstName" placeholder="" data-text="Enter your first name" required>
+                </div>
+                <div>
+                    <label for="LastName">Last Name</label>
+                    <input type="text" id="LastName" placeholder="" data-text="Enter your last name" required>
+                </div>
+                <div>
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" placeholder="" data-text="Enter your email" required>
+                </div>
+                <div>
+                    <label for="Message">Message</label>
+                    <textarea id="Message" placeholder="" data-text="Write your message here..." required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+
+
+        </section>
+    </main>
     <!-- script -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -127,6 +154,29 @@
                 menuOverlay.classList.remove('active');
                 menuIcon.style.display = "block";
                 closeIcon.style.display = "none";
+            });
+        });
+        const inputs = form.querySelectorAll("input[required], textarea[required]");
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = [
+                document.getElementById("FirstName"),
+                document.getElementById("LastName"),
+                document.getElementById("Email"),
+                document.getElementById("Message")
+            ];
+
+            elements.forEach((el, index) => {
+                const fullText = el.getAttribute("data-text");
+                let currentIndex = 0;
+
+                // Har biri ketma-ket yozilsin, delay bilan
+                setTimeout(function typeLetter() {
+                    if (currentIndex <= fullText.length) {
+                        el.setAttribute("placeholder", fullText.slice(0, currentIndex));
+                        currentIndex++;
+                        setTimeout(typeLetter, 70); // harf oralig‘i
+                    }
+                }, index * 800); // har bir input boshlanish kechikishi
             });
         });
 

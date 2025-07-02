@@ -402,5 +402,160 @@ body {
     border-radius: 30px;
   }
 }
+.form {
+  background-image: url(../../img/png/Artificial-Intelligence-AI-scaled-1-2048x1366.jpg);
+  width: 100%;
+  max-width: 2002px;
+  background-size: 100rem;
+  background-position: center center;
+  overflow: hidden;
+  object-fit: cover;
+  margin-top: 8rem;
+  justify-content: center;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 3rem;
+}
+.form textarea {
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical;
+  /* foydalanuvchi o‘lchamini o‘zgartira oladi */
+  min-height: 120px;
+  font-family: sans-serif;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.contact {
+  align-items: center;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3rem;
+  border-radius: 30px;
+}
+.contact button {
+  background-color: transparent;
+  border-radius: 2px solid #fff;
+}
+.contact input {
+  padding: 1rem 1rem;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #999;
+  transition: all 1s ease;
+}
+.contact input::placeholder {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+.contact input:focus::placeholder,
+.contact input:hover::placeholder {
+  opacity: 1;
+}
+
+input,
+textarea {
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    background-image: url(../../img/png/Artificial-Intelligence-AI-scaled-1-2048x1366.jpg);
+    width: 100%;
+    max-width: 2002px;
+    background-size: 100rem;
+    background-position: center center;
+    overflow: hidden;
+    object-fit: cover;
+    margin-top: 8rem;
+    justify-content: center;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 2rem;
+  }
+  .form textarea {
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;
+    /* foydalanuvchi o‘lchamini o‘zgartira oladi */
+    min-height: 120px;
+    font-family: sans-serif;
+    width: 100%;
+    border-radius: 12px;
+  }
+  .contact {
+    align-items: center;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 30px;
+  }
+  .contact button {
+    background-color: transparent;
+    border-radius: 2px solid #fff;
+  }
+  .contact input {
+    padding: 1rem 1rem;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #999;
+    transition: all 1s ease;
+  }
+  .contact input::placeholder {
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+  .contact input:focus::placeholder,
+  .contact input:hover::placeholder {
+    opacity: 1;
+  }
+  input,
+  textarea {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
